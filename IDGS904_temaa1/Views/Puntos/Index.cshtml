@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title="Index";
+
+}
+<h1>Index</h1>
+
+<div class="container">
+    <div class="row col-lg-6">
+        <form action="/Puntos/Calcular" method="post">
+
+            <label for="x1">x1</label>
+            <input type="text" name="x1" value="" />
+            <br>
+            <label for="x2">x2</label>
+            <input type="text" name="x2" value="" />
+            <br>
+            <label for="y1">y1</label>
+            <input type="text" name="y1" value="" />
+            <br>
+            <label for="y2">y2</label>
+            <input type="text" name="y2" value="" />
+            <br>
+            <input class = "btn btn-danger"  type="submit" name="cal" value="Calcular" />
+
+        </form>
+        <h2>@ViewBag.valor</h2>
+       
+    </div>
+</div>
