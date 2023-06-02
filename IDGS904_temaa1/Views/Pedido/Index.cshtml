@@ -1,0 +1,47 @@
+﻿@model IDGS904_temaa1.Models.Pedido
+
+<h2>Hacer Pedido</h2>
+
+@using (Html.BeginForm("Guardar", "Pedido"))
+{
+    <div>
+        <label>Nombre:</label>
+        @Html.TextBoxFor(m => m.Nombre)
+    </div>
+    <div>
+        <label>Dirección:</label>
+        @Html.TextBoxFor(m => m.Direccion)
+    </div>
+    <div>
+        <label>Teléfono:</label>
+        @Html.TextBoxFor(m => m.Telefono)
+    </div>
+    <div>
+        <label>Tamaño de pizza:</label>
+        @Html.DropDownListFor(m => m.Tamano, new List<SelectListItem>
+        {
+            new SelectListItem { Text = "Chica", Value = "chica" },
+            new SelectListItem { Text = "Mediana", Value = "mediana" },
+            new SelectListItem { Text = "Grande", Value = "grande" }
+        })
+    </div>
+    <div>
+        <label>Ingredientes (selecciona varios):</label>
+        <br />
+        @foreach (var ingrediente in Model.Ingredientes)
+        {
+            <input type="checkbox" name="Ingredientes" value="@ingrediente" /> @ingrediente <br />
+        }
+    </div>
+    <div>
+        <label>Cantidad:</label>
+        @Html.TextBoxFor(m => m.Cantidad)
+    </div>
+    <div>
+        <input type="submit" value="Guardar pedido" />
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Ver todos los pedidos", "Mostrar", "Pedido")
+</div>

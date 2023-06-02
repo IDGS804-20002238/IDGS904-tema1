@@ -1,0 +1,6 @@
+mediana,5,Pepperoni,Piña,350,350
+chica,1,Pepperoni,50,50
+chica,0,Pepperoni,0,0
+chica,1,Pepperoni,50,50
+chica,1,Pepperoni,50,50
+chica,1,Pepperoni,50,50

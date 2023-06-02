@@ -16,7 +16,7 @@ namespace IDGS904_temaa1
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Puntos", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Tiendita", action = "Registrar", id = UrlParameter.Optional }
             );
         }
     }

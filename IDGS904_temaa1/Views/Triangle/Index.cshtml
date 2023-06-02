@@ -1,0 +1,54 @@
+﻿@model IDGS904_temaa1.Models.TriangleModel
+
+@using (Html.BeginForm("Verify", "Triangle", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(m => m.X1)
+        @Html.TextBoxFor(m => m.X1)
+        @Html.ValidationMessageFor(m => m.X1)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Y1)
+        @Html.TextBoxFor(m => m.Y1)
+        @Html.ValidationMessageFor(m => m.Y1)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.X2)
+        @Html.TextBoxFor(m => m.X2)
+        @Html.ValidationMessageFor(m => m.X2)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Y2)
+        @Html.TextBoxFor(m => m.Y2)
+        @Html.ValidationMessageFor(m => m.Y2)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.X3)
+        @Html.TextBoxFor(m => m.X3)
+        @Html.ValidationMessageFor(m => m.X3)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Y3)
+        @Html.TextBoxFor(m => m.Y3)
+        @Html.ValidationMessageFor(m => m.Y3)
+    </div>
+    <div>
+        <input type="submit" value="Verificar" />
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div>
+        <p>Error: @Model.ErrorMessage</p>
+    </div>
+}
+
+@if (Model.IsValidTriangle)
+{
+    <div>
+        <p>Tipo de triángulo: @Model.TriangleType</p>
+        <p>Área: @Model.Area</p>
+    </div>
+}
+

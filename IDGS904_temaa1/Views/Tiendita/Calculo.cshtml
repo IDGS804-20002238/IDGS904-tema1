@@ -1,0 +1,44 @@
+﻿@model IDGS904_temaa1.Models.FtoC
+
+@{
+    ViewBag.Title="Calculo";
+
+}
+
+
+<h2>Calculo</h2>
+
+
+@using (Html.BeginForm("Result", "Tiendita", FormMethod.Post))
+{
+
+
+
+    <div class="form-group">
+
+        @Html.LabelFor(model => Model.Grados, htmlAttributes:
+        new { @class = "control-label col-md-2" })
+    </div>
+    <div class="col-md-10">
+
+        @Html.EditorFor(model => model.Grados,
+        new { htmlAttributtes = new { @class = "from-control" } })
+    </div>
+
+    <h5>Convertir a: </h5>
+
+   
+    @Html.RadioButtonFor(model => Model.tipo, "f") @Html.Label("F")
+    <br>
+    @Html.RadioButtonFor(model => Model.tipo, "c") @Html.Label("C")
+    <br>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" name="name" value="Calcular" />
+        </div>
+
+
+    </div>
+    <h2>@ViewBag.valor °</h2>
+}

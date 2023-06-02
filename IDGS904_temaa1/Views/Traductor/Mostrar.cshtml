@@ -1,0 +1,30 @@
+﻿
+@model List<string>
+
+@{
+    ViewBag.Title = "Mostrar";
+}
+
+<h2>Traducciones</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ingles</th>
+            <th>Español</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var linea in Model)
+        {
+            var valores = linea.Split(',');
+            <tr>
+                <td>@valores[1]</td>
+                <td>@valores[0]</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    @Html.ActionLink("Volver al inicio", "Index", "Traductor", null, new { @class = "btn btn-primary" })
+</div>

@@ -1,0 +1,4 @@
+hola,hi
+hola,hi
+carro,car
+pelota,ball

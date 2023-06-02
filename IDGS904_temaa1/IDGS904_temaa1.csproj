@@ -120,18 +120,35 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArchivoController.cs" />
     <Compile Include="Controllers\EscuelaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewController.cs" />
+    <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="Controllers\PuntosController.cs" />
+    <Compile Include="Controllers\TienditaController.cs" />
+    <Compile Include="Controllers\TraductorController.cs" />
+    <Compile Include="Controllers\TriangleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Alumnos.cs" />
+    <Compile Include="Models\FtoC.cs" />
+    <Compile Include="Models\Maestros.cs" />
     <Compile Include="Models\OperasBAs.cs" />
+    <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Productos.cs" />
     <Compile Include="Models\Puntos.cs" />
+    <Compile Include="Models\traductor.cs" />
+    <Compile Include="Models\TriangleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\GuardarPedidoServices.cs" />
+    <Compile Include="Services\GuardarServices.cs" />
+    <Compile Include="Services\LeerPedidoServices.cs" />
+    <Compile Include="Services\LeerServices.cs" />
+    <Compile Include="Services\mostrar.cs" />
     <Compile Include="Services\ProductoServices.cs" />
+    <Compile Include="Services\TraductorGuardarServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -195,9 +212,27 @@
     <Content Include="Views\Escuela\Index2.cshtml" />
     <Content Include="Views\Puntos\Index.cshtml" />
     <Content Include="Views\Puntos\Calcular.cshtml" />
+    <Content Include="Views\Tiendita\Index.cshtml" />
+    <Content Include="Views\Tiendita\DisplayTemplates\Boolean.cshtml" />
+    <Content Include="Views\Tiendita\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\Tiendita\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Tiendita\Registrar.cshtml" />
+    <Content Include="Views\Tiendita\Calculo.cshtml" />
+    <Content Include="Views\Tiendita\Result.cshtml" />
+    <Content Include="Views\Archivo\Registrar.cshtml" />
+    <Content Include="Views\Archivo\LeerDatos.cshtml" />
+    <Content Include="Views\Traductor\Registrar.cshtml" />
+    <Content Include="Views\Traductor\Index.cshtml" />
+    <Content Include="Views\Traductor\Mostrar.cshtml" />
+    <Content Include="Views\Traductor\Buscar.cshtml" />
+    <Content Include="Views\Triangle\Index.cshtml" />
+    <Content Include="Views\Pedido\Index.cshtml" />
+    <Content Include="Views\Pedido\Mostrar.cshtml" />
+    <Content Include="Views\Pedido\Confirmacion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\FtoCen\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

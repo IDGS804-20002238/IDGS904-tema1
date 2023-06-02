@@ -14,7 +14,7 @@ namespace IDGS904_temaa1.Controllers
         // GET: New
         public ActionResult NuevoSaludo()
         {
-            ViewBag.Nombre="JART";
+            ViewBag.Nombre="RCe";
             return View();
         }
 
